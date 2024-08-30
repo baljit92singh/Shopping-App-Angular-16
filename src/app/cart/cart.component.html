@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">Cart</mat-toolbar>
+<div *ngIf="cartItems.length === 0">Your cart is empty</div>
+<div *ngFor="let item of cartItems">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{ item.name }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Price: {{ item.price | currency }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
